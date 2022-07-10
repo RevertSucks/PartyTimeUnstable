@@ -14,10 +14,12 @@ local selectedAmount
 
 local debugMode = false
 
+wait(1)
+
 if debugMode == false and game.Players.LocalPlayer:FindFirstChild("RanLoader") then
     game.Players.LocalPlayer:FindFirstChild("RanLoader"):Destroy()
 elseif debugMode == false and not game.Players.LocalPlayer:FindFirstChild("RanLoader") then
-    game.Players.LocalPlayer:Kick("Please run loaded")
+    game.Players.LocalPlayer:Kick("Please run loader")
     wait(1.5)
     for _,v in pairs(game:GetDescendants()) do
         v:Destroy()
